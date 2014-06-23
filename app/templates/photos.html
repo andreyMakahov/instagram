@@ -1,0 +1,19 @@
+<div class="box-container" ng-repeat="photo in photos track by photo.id">
+	<photo-user 
+		time="photo.caption.created_time" 
+		nickname="photo.user.username" 
+		avatar="{{photo.user.profile_picture}}"></photo-user>
+	<photo-item 
+		on-get-comments="onGetComments({photoId:photoId})"
+		id="{{photo.id}}"
+		source="{{photo.images.standard_resolution.url}}" 
+		like-count="photo.likes.count" 
+		comments="photo.comments" 
+		dscr="photo.caption.text" 
+		user-thumb="{{photo.caption.from.profile_picture}}" 
+		isset-dscr="{{null !== photo.caption}}"
+		></photo-item>
+</div>
+<div class="load-more-container" ng-click="more()">
+	<button>Load more</button>
+</div>

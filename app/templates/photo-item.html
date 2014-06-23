@@ -1,0 +1,32 @@
+<div class="photo-container">
+	<div class="image-attrs">
+		<img ng-src="{{source}}" class="photo"/>
+		<div class="like-container">
+			<a href="#" class="like"></a>
+			<span class="like-counter">{{likeCount}}</span>
+		</div>
+		<div class="dscr-container" ng-show="{{issetDscr}}">
+			<img class="user-ava" ng-src="{{userThumb}}"/>
+			<div class="dscr-text">{{dscr}}</div>
+		</div>
+		<div class="comments-container" ng-show="{{comments.count>0}}">
+			<div class="more-comments" ng-show="{{comments.count > 3}}" ng-click="onGetComments({photoId: id})">{{comments.count+" more comments"}}</div>
+			<div class="comment" ng-repeat="comment in comments.data">
+				<img class="user-ava" ng-src="{{comment.from.profile_picture}}"/>
+				<div class="comment-text">
+					<a href="#" class="username">{{comment.from.username}}</a>
+				<span>{{comment.text}}</span>
+				</div>
+			</div>
+		</div>
+		<div class="form-leave-comment">
+			<form role="form">
+				<div class="form-group">
+					<input type="text" class="form-control" id="leave-comment" placeholder="Write a comment...">
+				</div>
+			</form>
+		</div>
+		
+	</div>
+	<div class="clear"></div>
+</div>
