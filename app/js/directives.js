@@ -11,13 +11,13 @@ angular.module('app.directives', []).
 				onGetComments:'&onGetComments',
 				more:'&onLoadMore'
 			},
-			templateUrl:"templates/photos.html",
+			templateUrl:"app/templates/photos.html",
 		};
 	}).
 	directive("photoItem", function(){
 		return {
 			restrict:"E",
-			templateUrl:"templates/photo-item.html",
+			templateUrl:"app/templates/photo-item.html",
 			scope:{
 				source:"@",
 				id:'@',
@@ -36,7 +36,7 @@ angular.module('app.directives', []).
 	directive("photoUser", function(){
 		return {
 			restrict:"E",
-			templateUrl:"templates/photo-user.html",
+			templateUrl:"app/templates/photo-user.html",
 			scope:{
 				time:"=",
 				nickname:"=",
