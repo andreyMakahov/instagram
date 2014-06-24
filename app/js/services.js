@@ -13,7 +13,7 @@ angular.module('app.services', ['ngResource'])
 					method:"JSONP"
 				},
 				postComment:{
-					url:"https://api.instagram.com/v1/media/:photoId/comments?client_id="+CLIENT_ID+"&access_token="+CLIENT_SECRET, 
+					url:"https://api.instagram.com/v1/media/749707591986885447_42689779/comments?client_id="+CLIENT_ID+"&access_token="+CLIENT_SECRET, 
 					method:"POST", callback:"JSON_CALLBACK"
 				}
 			});
