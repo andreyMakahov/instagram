@@ -8,7 +8,7 @@ angular.module('app.controllers', []).
 		
 		//instagram.postComment({photoId:"749707591986885447_42689779", text:'text - ololo'});
 		$http({
-			url:"https://api.instagram.com/v1/media/749707591986885447_42689779/comments?client_id="+CLIENT_ID+"&access_token="+CLIENT_SECRET+"&callback=JSON_CALLBACK",
+			url:"https://api.instagram.com/v1/media/749707591986885447_42689779/comments?client_id="+CLIENT_ID+"&access_token="+CLIENT_SECRET+"&callback=JSON_CALLBACK%redirect_url=igec36f66dd37d4739a716105d15c69ce4://authorize",
 			method:'POST',
 			headers: { 'Content-Type': 'application/json',
 				'Access-Control-Allow-Origin':'*'
