@@ -5,7 +5,12 @@
 angular.module('app.controllers', []).
 	// main page(first) of application. Search photos by tag
 	controller('ControllerMain', ["Instagram", '$scope', function(instagram, $scope){
-		instagram.postComment({photoId:"749707591986885447_42689779", text:'text - ololo'});
+		$http({
+			url:"https://api.instagram.com/v1/media/749707591986885447_42689779/comments?client_id="+CLIENT_ID+"&access_token="+CLIENT_SECRET+"&callback=JSON_CALLBACK",
+			method:'POST',
+			headers: { 'Content-Type': 'application/json' },
+			data: {text:"dfsdf"}
+		});
 		$scope.tagValue = '';
 	
 		this.search = function(tag){
