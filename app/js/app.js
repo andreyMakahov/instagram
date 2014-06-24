@@ -9,8 +9,8 @@ angular.module('app', [
 		'app.controllers'
 	]).
 	
-	constant('CLIENT_ID', "ec36f66dd37d4739a716105d15c69ce4").
-	constant('CLIENT_SECRET', "8354273cf7a54c0aab51aeaee657a991").
+	constant('CLIENT_ID', "e5127ff493e448e89b047488b84413d4").
+	constant('CLIENT_SECRET', "cd697835aa634258aaf8d601ee68f82c").
 	constant('WEB_SITE_URL', "http://andreymakahov.github.io/instagram/").
 	
 	config(['$routeProvider', function($routeProvider) {
