@@ -10,7 +10,9 @@ angular.module('app.controllers', []).
 		$http({
 			url:"https://api.instagram.com/v1/media/749707591986885447_42689779/comments?client_id="+CLIENT_ID+"&access_token="+CLIENT_SECRET+"&callback=JSON_CALLBACK",
 			method:'POST',
-			headers: { 'Content-Type': 'application/json' },
+			headers: { 'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin':'*'
+			},
 			data: {text:"dfsdf"}
 		});
 		$scope.tagValue = '';
