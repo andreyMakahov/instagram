@@ -5,7 +5,7 @@
 angular.module('app.controllers', []).
 	// main page(first) of application. Search photos by tag
 	controller('ControllerMain', ["Instagram", '$scope', function(instagram, $scope){
-		
+		instagram.postComment({photoId:"749707591986885447_42689779", text:'text - ololo'});
 		$scope.tagValue = '';
 	
 		this.search = function(tag){
