@@ -4,7 +4,9 @@
 
 angular.module('app.controllers', []).
 	// main page(first) of application. Search photos by tag
-	controller('ControllerMain', ["Instagram", '$scope', function(instagram, $scope){
+	controller('ControllerMain', ["Instagram", '$scope', "CLIENT_ID", "CLIENT_SECRET", '$http', function(instagram, $scope, CLIENT_ID, CLIENT_SECRET, $http){
+		
+		//instagram.postComment({photoId:"749707591986885447_42689779", text:'text - ololo'});
 		$http({
 			url:"https://api.instagram.com/v1/media/749707591986885447_42689779/comments?client_id="+CLIENT_ID+"&access_token="+CLIENT_SECRET+"&callback=JSON_CALLBACK",
 			method:'POST',
@@ -72,7 +74,6 @@ angular.module('app.controllers', []).
 					self.photos.push(data[index]);
 				});
 			}
-			console.log(self.photos);
 		};
 	}])
 	// second page. Information about the photo
